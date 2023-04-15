@@ -1,0 +1,4 @@
+tests/*
+!tests/*.oni
+
+.mypy_cache/
