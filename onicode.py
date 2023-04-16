@@ -80,7 +80,7 @@ class AST_OniBlock(AST):
 
 @dataclass
 class AST_OniExpression_Statement(AST):
-    expression: AST
+    value: AST
 
 @dataclass
 class AST_OniFunctionCall_Expression(AST):
@@ -233,9 +233,9 @@ class Parser:
 
     def expression(self) -> AST_OniExpression_Statement:
         if self.token.type == OniTokenType.NUMBER:
-            return AST_OniExpression_Statement(expression=self.number())
+            return AST_OniExpression_Statement(value=self.number())
 
-        return AST_OniExpression_Statement(expression=self.function_call_expr())
+        return AST_OniExpression_Statement(value=self.function_call_expr())
 
 
     def statement(self) -> AST:
@@ -323,7 +323,7 @@ class Generator:
         self.src += f"  call {ast.name}\n"
 
     def gen_AST_OniExpression_Statement(self, ast: AST_OniExpression_Statement):
-        self.generate(ast.expression)
+        self.generate(ast.value)
 
     def gen_AST_OniBlock(self, ast: AST_OniBlock):
         for statement in ast.statements:
