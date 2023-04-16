@@ -1,3 +1,5 @@
+// Test for main function in the language
+
 func main() -- nothing {
   putd(42);
 }

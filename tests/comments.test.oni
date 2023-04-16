@@ -1,3 +1,5 @@
+// Test for comments in the language
+
 //valid comment
 func main() -- nothing { //valid comment
   putd(69); //valid comment 
