@@ -1,0 +1,8 @@
+//valid comment
+func main() -- nothing { //valid comment
+  putd(69); //valid comment 
+
+  //putd(42);
+}
+
+//valid comment
