@@ -1,0 +1,83 @@
+// Test for all operators in the language
+
+func main() -- nothing {
+  // arithmetic operators
+  putd(20 + 22);
+  putd(120 - 51);
+  putd(40 * 2);
+  putd(120 / 4);
+  putd(69 % 4);
+
+  putd(1111111111111111111);
+
+  // bitwise operators
+  putd(5 & 3);
+  putd(5 | 3);
+  putd(5 ^ 3);
+  putd(20 << 1);
+  putd(20 >> 1);
+
+  putd(1111111111111111111);
+
+  // equality operators
+  putd(2 == 2);
+  putd(2 == 3);
+  putd(2 != 2);
+  putd(2 != 3);
+
+  putd(1111111111111111111);
+
+  // relational operators
+  putd(2 < 1);
+  putd(2 < 2);
+  putd(2 < 3);
+  putd(2 > 1);
+  putd(2 > 2);
+  putd(2 > 3);
+
+  putd(1111111111111111111);
+
+  putd(2 <= 1);
+  putd(2 <= 2);
+  putd(2 <= 3);
+  putd(2 >= 1);
+  putd(2 >= 2);
+  putd(2 >= 3);
+
+  putd(1111111111111111111);
+
+  // logical operators
+
+  putd(1 == 1 && 1 == 1);
+  putd(1 == 2 && 1 == 1);
+  putd(1 == 1 && 1 == 2);
+  putd(1 == 2 && 1 == 2);
+
+  putd(1111111111111111111);
+
+  putd(1 == 1 || 1 == 1);
+  putd(1 == 2 || 1 == 1);
+  putd(1 == 1 || 1 == 2);
+  putd(1 == 2 || 1 == 2);
+
+  putd(1111111111111111111);
+
+  // unary operators
+  putd(+20);
+  putd(-20);
+  putd(!0);
+  putd(!1);
+  putd(~0);
+  putd(~1);
+
+  putd(1111111111111111111);
+
+  // primary expression
+
+  putd(42);
+  putd(true);
+  putd(false);
+  putd(null);
+
+  putd((20 + 10) * 40 / (80 - 20));
+}
