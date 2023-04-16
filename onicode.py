@@ -116,6 +116,10 @@ class Lexer:
         else:
             self.c = "\0"
 
+    def skip_comments(self):
+        while self.c != "\n":
+            self.advance()
+
     def skip_whitespaces(self):
         while self.c.isspace() and self.c != "\0":
             self.advance()
@@ -140,6 +144,13 @@ class Lexer:
 
     def next_token(self):
         while self.c != "\0":
+            if self.pos < len(self.src) - 1:
+                comment_start = self.c + self.src[self.pos + 1]
+
+                if comment_start == "//":
+                    self.skip_comments()
+                    continue
+
             if self.c.isspace():
                 self.skip_whitespaces()
                 continue
